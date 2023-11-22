@@ -1,1 +1,3 @@
-const manageForms=o=>o.ok;
+const manageForms = (props) => {
+    return props.ok
+}
