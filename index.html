@@ -14,6 +14,7 @@
         <meta name="msapplication-TileColor" content="#232e39">
         <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
+        <script src="assets/js/manageForms.js" defer></script>
         <script defer src="assets/js/runtime.js"></script>
         <script defer src="assets/js/main.js"></script>
         <link href="assets/css/vendors.css" rel="stylesheet">
@@ -108,11 +109,13 @@
         </svg>
         <!-- === / ICONS ===-->
         <!-- === BUBBLE ===-->
-        <a class="bubble" href="#">
-            <svg class="icon bubble-icon" role="img" aria-label="Отримати консультацію">
-                <use href="#question-raw-icon"></use>
-            </svg>
-        </a>
+        <div class="bubble-wrapper is-fixed">
+            <button class="bubble" type="button" data-modal="#modal">
+                <svg class="icon bubble-icon" role="img" aria-label="Отримати консультацію">
+                    <use href="#question-raw-icon"></use>
+                </svg>
+            </button>
+        </div>
         <!-- === / BUBBLE ===-->
         <div class="wrapper">
             <!-- === HEADER ===-->
@@ -192,7 +195,7 @@
                                     <div class="container">
                                         <div class="showcase-title" data-aos="fade-right">Підбір постачальника</div>
                                         <div class="showcase-text" data-aos="fade-right" data-aos-delay="150">Ми надамо професійнy консультацію необхідні інструменти, знання та підтримку для досягнення ваших бізнес-цілей</div>
-                                        <a class="button" href="#" data-aos="fade-right" data-aos-delay="300">Отримати консультацію</a>
+                                        <button class="button" type="button" data-modal="#modal" data-aos="fade-right" data-aos-delay="300">Отримати консультацію</button>
                                     </div>
                                 </div>
                                 <!-- === / SLIDE CONTENT ===-->
@@ -214,7 +217,7 @@
                                     <div class="container">
                                         <div class="showcase-title" data-aos="fade-right">Виробництво</div>
                                         <div class="showcase-text" data-aos="fade-right" data-aos-delay="150">Ми надамо професійнy консультацію необхідні інструменти, знання та підтримку для досягнення ваших бізнес-цілей</div>
-                                        <a class="button" href="#" data-aos="fade-right" data-aos-delay="300">Отримати консультацію</a>
+                                        <button class="button" type="button" data-modal="#modal" data-aos="fade-right" data-aos-delay="300">Отримати консультацію</button>
                                     </div>
                                 </div>
                                 <!-- === / SLIDE CONTENT ===-->
@@ -232,7 +235,7 @@
                                     <div class="container">
                                         <div class="showcase-title" data-aos="fade-right">Контроль відвантажень</div>
                                         <div class="showcase-text" data-aos="fade-right" data-aos-delay="150">Ми надамо професійнy консультацію необхідні інструменти, знання та підтримку для досягнення ваших бізнес-цілей</div>
-                                        <a class="button" href="#" data-aos="fade-right" data-aos-delay="300">Отримати консультацію</a>
+                                        <button class="button" type="button" data-modal="#modal" data-aos="fade-right" data-aos-delay="300">Отримати консультацію</button>
                                     </div>
                                 </div>
                                 <!-- === / SLIDE CONTENT ===-->
@@ -250,7 +253,7 @@
                                     <div class="container">
                                         <div class="showcase-title" data-aos="fade-right">Склади</div>
                                         <div class="showcase-text" data-aos="fade-right" data-aos-delay="150">Ми надамо професійнy консультацію необхідні інструменти, знання та підтримку для досягнення ваших бізнес-цілей</div>
-                                        <a class="button" href="#" data-aos="fade-right" data-aos-delay="300">Отримати консультацію</a>
+                                        <button class="button" type="button" data-modal="#modal" data-aos="fade-right" data-aos-delay="300">Отримати консультацію</button>
                                     </div>
                                 </div>
                                 <!-- === / SLIDE CONTENT ===-->
@@ -837,6 +840,29 @@
             </footer>
             <!-- === / FOOTER ===-->
         </div>
+        <!-- === MODAL ===-->
+        <div class="modal" id="modal" tabindex="-1">
+            <div class="modal-dialog">
+                <button class="modal-close" type="button">
+                    <svg class="icon modal-close-icon" role="img" aria-label="Закрити вікно">
+                        <use href="#close-icon"></use>
+                    </svg>
+                </button>
+                <div class="modal-title">Отримати консультацію</div>
+                <form class="modal-form validate" novalidate>
+                    <div class="modal-form-item">
+                        <input class="modal-form-input" type="text" name="Ім'я" placeholder="Ім'я *" required>
+                    </div>
+                    <div class="modal-form-item">
+                        <input class="modal-form-input" type="tel" name="phone" placeholder="Номер телефону *" required>
+                    </div>
+                    <div class="modal-form-submit">
+                        <button class="button button-outlined" type="submit">Надіслати заявку</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- === / MODAL ===-->
     </body>
 
 </html>
