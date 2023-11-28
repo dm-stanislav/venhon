@@ -1,3 +1,1 @@
-const manageForms = (props) => {
-    return props.ok
-}
+const manageForms=e=>{e.ok&&notify("✅ <b>Ваша заявка успішно надіслана!</b><br />Найближчим часом ми зв'яжемося із Вами."),e.formElement.reset();const o=document.querySelector(".modal.active");return o&&closeModal(o),!1};
