@@ -1,1 +1,1 @@
-const manageForms=e=>{e.ok&&notify("✅ <b>Ваша заявка успішно надіслана!</b><br />Найближчим часом ми зв'яжемося із Вами."),e.formElement.reset();const o=document.querySelector(".modal.active");return o&&closeModal(o),!1};
+const manageForms=e=>{if(e.ok){notify("✅ <b>Ваша заявка успішно надіслана!</b><br />Найближчим часом ми зв'яжемося із Вами."),e.formElement.reset();const o=document.querySelector(".modal.active");o&&closeModal(o)}return!1};
